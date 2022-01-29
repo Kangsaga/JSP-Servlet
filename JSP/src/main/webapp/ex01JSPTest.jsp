@@ -19,7 +19,7 @@
 	
 		int num1 = 30;
 	%>
-	<%--jspf에서 java변수의 값을 웨페이로 꺼내고 ㄹ때는 표현식을 사용한다 --%>
+	<%--jspf에서 java변수의 값을 웹페이지로 꺼내고 사용할 때는 표현식을 사용한다 --%>
 	num의 값은 : <%= num %><br>
 	
 	<hr width="500px" size="<%= num1 %>px" color="red">
