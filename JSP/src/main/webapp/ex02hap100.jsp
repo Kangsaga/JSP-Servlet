@@ -7,8 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
-	
+        // 표현식을 통해 구현한다
 	<%
 		int result = 0;
 		for (int i =1; i<=100; i++){
