@@ -8,7 +8,7 @@
 </head>
 <body>
 	
-	
+	// 테이블 만들기
 	<%
 	String th = "";
 	for (int i =1; i<=10; i++){
