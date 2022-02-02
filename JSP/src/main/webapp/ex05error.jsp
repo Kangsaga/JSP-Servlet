@@ -9,12 +9,12 @@
 </head>
 <body>
 		<% 
-			String name = "°­¹ü¼ö";
+			String name = "ê°•ë²”ìˆ˜";
 			int age = 24;
-			String addr = "±¤ÁÖ±¤¿ª½Ã ºÏ±¸ ¿ëºÀµ¿";
+			String addr = "ê´‘ì£¼ê´‘ì—­ì‹œ ë¶êµ¬ ìš©ë´‰ë™";
 			//int cal = 2/0;
-			String hobby = "¿îµ¿, ÄÚµåÄ¡±â";
-			String phone = "010-6398-1897";
+			String hobby = "ìš´ë™, ì½”ë“œì¹˜ê¸°";
+			String phone = "";
 		
 		
 		
