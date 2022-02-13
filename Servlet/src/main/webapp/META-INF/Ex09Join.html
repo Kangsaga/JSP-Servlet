@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex09Join</title>
+
+</head>
+<body>
+<form action="JoinService" method="post">
+<fieldset style="padding:10; border-color : black; border-style:solid; width:100;">
+<table border=0 cellpadding=0 cellspacing=4 width=350 align="center" >
+
+
+<legend> <font color=black size=3><b>Join</font></legend></b></font>
+
+   
+   <tr>
+      <td>ID</td>
+      <td><input type="text" name="user-id"></td>
+   </tr>
+   <tr>
+      <td>PW</td>
+      <td><input type="password" name="user-pw"></td>
+   </tr>   
+   <tr>
+      <td>NAME</td>
+      <td><input type="text" name="user-name"> </td>
+   </tr>
+   <tr>
+       <td>EMAIL</td>
+       <td><input type="email" name="user-email"></td>
+   </tr>    
+   <tr>    
+       <td>TEL</td>
+       <td><input type="text" name="user-tel"> </td>
+   </tr>
+   <tr>
+       <td>GENDER</td> 
+        <td>MAN<input type="radio" name="user-gender" value="남자">  
+        WOMAN<input type="radio" name="user-gender" value="여자"></td>
+   </tr>
+   <tr>     
+         <td>HOBBY</td>
+         <td>SPORT<input type="checkbox" name="user-hobby" value="운동" />
+      STUDY<input type="checkbox" name="user-hobby" value="공부" />
+      EATING<input type="checkbox" name="user-hobby" value="먹기" /></td>
+   </tr>      
+   <tr>      
+         <td>BIRTHDAY</td>
+         <td><input type="date" name="user-birthday"></td>
+   </tr>
+   <tr>      
+         <td>COLOR</td>
+         <td><input type="color" name="user-color"></td>
+   </tr>     
+   <tr>      
+         <td>COUNTRY</td>
+         <td><select name="user-country">
+         
+        <option >choice</option>
+        <option value="한국">KOREA</option>
+        <option value="미국">AMERICA</option>
+        <option value="일본">JAPAN</option>
+      </select></td>
+   </tr>
+   <tr>      
+         <td>TALK</td>
+         <td><textarea name="user-talk" cols="28" rows="13"> </textarea></td>
+   </tr>
+   <tr>    
+       <td colspan="2" align="center"><input type="submit" name="Join">
+       <input type="reset" name="Reset"></td>
+   </tr>
+</table>
+   </fieldset>
+
+
+   </form>
+</body>
+</html>
