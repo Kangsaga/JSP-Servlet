@@ -16,6 +16,7 @@ public class MemberDAO {
 	private int cnt;
 	private String sql;
 	
+        // ì—°ê²°
 	public void connect() {
 		
 		try {
@@ -94,7 +95,7 @@ public class MemberDAO {
 			rs = psmt.executeQuery();
 			
 			
-			if(rs.next()) {//È¸¿ø°¡ÀÔµÈ Á¤º¸°¡ DB¿¡ ÀÖ´Â °æ¿ì
+			if(rs.next()) {//íšŒì›ê°€ì…ëœ ì •ë³´ê°€ DBì— ìˆëŠ” ê²½ìš°
 				
 				dto = new MemberDTO(emil, null, rs.getString("m_tel"), rs.getString("m_address"));
 				
