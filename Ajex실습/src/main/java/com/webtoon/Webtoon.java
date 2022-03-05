@@ -25,36 +25,37 @@ public class Webtoon extends HttpServlet {
 		
 		response.setContentType("text/plain; charset=utf-8");
 		
-		// Db¿¡ ÀÖ´Â µ¥ÀÌÅÍ¸¦ WebtoonInfo °´Ã¼·Î ¸¸µé¾î¼­
-		// webtoon.html·Î Àü´Þ
+		// Dbì— ìžˆëŠ” ë°ì´í„°ë¥¼ WebtoonInfo ê°ì²´ë¡œ ë§Œë“¤ì–´ì„œ
+		// webtoon.htmlë¡œ ì „ë‹¬
 		
-		//DB¿¡ ÀÖ´Â µ¥ÀÌÅÍ°¡Á¤
+		//DBì— ìžˆëŠ” ë°ì´í„°ê°€ì •
+
 		
-		// ÇÁ¸®µå·Î¿ì Àü¼±¿í Åä¿äÀÏ
-		// °«¿ÀºêÇÏÀÌ½ºÄð ¹Ú¿ëÁ¦ ±Ý¿äÀÏ
-		// ½ÅÀÇ Å¾ SIU ¿ù¿äÀÏ
-		WebtoonInfo wt1 = new WebtoonInfo("ÇÁ¸®µå·Î¿ì", "Àü¼±¿í", "Åä¿äÀÏ");
-		WebtoonInfo wt2 = new WebtoonInfo("°« ¿Àºê ÇÏÀÌ½ºÄð", "¹Ú¿ëÁ¦", "±Ý¿äÀÏ");
-		WebtoonInfo wt3 = new WebtoonInfo("½ÅÀÇ Å¾", "SIU", "¿ù¿äÀÏ");
+		// í”„ë¦¬ë“œë¡œìš° ì „ì„ ìš± í† ìš”ì¼
+		// ê°“ì˜¤ë¸Œí•˜ì´ìŠ¤ì¿¨ ë°•ìš©ì œ ê¸ˆìš”ì¼
+		// ì‹ ì˜ íƒ‘ SIU ì›”ìš”ì¼
+		WebtoonInfo wt1 = new WebtoonInfo("í”„ë¦¬ë“œë¡œìš°", "ì „ì„ ìš±", "í† ìš”ì¼");
+		WebtoonInfo wt2 = new WebtoonInfo("ê°“ ì˜¤ë¸Œ í•˜ì´ìŠ¤ì¿¨", "ë°•ìš©ì œ", "ê¸ˆìš”ì¼");
+		WebtoonInfo wt3 = new WebtoonInfo("ì‹ ì˜ íƒ‘", "SIU", "ì›”ìš”ì¼");
 		
 		ArrayList<WebtoonInfo> wtList = new ArrayList<WebtoonInfo>();
 		wtList.add(wt1);
 		wtList.add(wt2);
 		wtList.add(wt3);
-		// DB¿¡ ÀÖ´Â µ¥ÀÌÅÍ¸¦ °¡Á®¿Ô´Ù
-		System.out.println("¿äÃ»ÀÌ µé¾î¿Ô´Ù");
-		//µ¥ÀÌÅÍ¸¦ json Å¸À×¤²À¸·Î ¹Ù±ºµÚ ¹ÝÈ¯ ½ÃÄÑÁà¾ßÇÔ!!
-		// Gson ¶óÀÌºê·¯¸® ÇÊ¿ä!
+		// DBì— ìžˆëŠ” ë°ì´í„°ë¥¼ ê°€ì ¸ì™”ë‹¤
+		System.out.println("ìš”ì²­ì´ ë“¤ì–´ì™”ë‹¤");
+		//ë°ì´í„°ë¥¼ json íƒ€ìž‰ã…‚ìœ¼ë¡œ ë°”êµ°ë’¤ ë°˜í™˜ ì‹œì¼œì¤˜ì•¼í•¨!!
+		// Gson ë¼ì´ë¸ŒëŸ¬ë¦¬ í•„ìš”!
 		
-		//Gson °´Ã¼ ¸¸µé±â --> ÀÚ¹ÙÀÇ µ¥ÀÌÅÍ¸¦ json Å¸ÀÔÀ¸·Î ¹Ù²Ù¾î ÁÖ´Â ¿ªÈ°
+		//Gson ê°ì²´ ë§Œë“¤ê¸° --> ìžë°”ì˜ ë°ì´í„°ë¥¼ json íƒ€ìž…ìœ¼ë¡œ ë°”ê¾¸ì–´ ì£¼ëŠ” ì—­í™œ
 		Gson gson = new Gson();
-		//jsonArray -> json Â÷ÀÔÀ¸·Î ¹Ù²ï µ¥ÀÌÅÍ¸¦ ÀúÀåÇÒ ¼ö ÀÖ´Â ¿ªÈ°
+		//jsonArray -> json ì°¨ìž…ìœ¼ë¡œ ë°”ë€ ë°ì´í„°ë¥¼ ì €ìž¥í•  ìˆ˜ ìžˆëŠ” ì—­í™œ
 		JsonArray jarray = new JsonArray();
 		
 		for (int i = 0; i < wtList.size(); i++) {
 			jarray.add(gson.toJson(wtList.get(i)));
-			//Gson °´Ã¼¸¦ »ç¿ëÇÑ´Ù¸é Å°°ªÀ» ¾Ë¾Æ¼­ ÁöÁ¤ÇØÁÜ
-			//Å°°ª --> ÇØ´çÇÏ´Â º¯¼ö¸í
+			//Gson ê°ì²´ë¥¼ ì‚¬ìš©í•œë‹¤ë©´ í‚¤ê°’ì„ ì•Œì•„ì„œ ì§€ì •í•´ì¤Œ
+			//í‚¤ê°’ --> í•´ë‹¹í•˜ëŠ” ë³€ìˆ˜ëª…
 		}
 		
 		PrintWriter out = response.getWriter();
