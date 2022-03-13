@@ -20,6 +20,7 @@
     </plugins>
   </build>
   
+// 의존성 주입
   <dependencies>
   			<!-- JSTL -->
 	<dependency>
